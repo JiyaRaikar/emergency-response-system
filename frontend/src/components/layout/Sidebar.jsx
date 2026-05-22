@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { API_URL } from '../../config'
 
 const NAV = [
   { to: '/', label: 'Dashboard', icon: '📊' },
@@ -38,7 +39,7 @@ export default function Sidebar() {
         ))}
       </nav>
       <div className="border-t border-slate-700 p-4 text-xs text-slate-500">
-        API: localhost:8000
+        API: {API_URL}
       </div>
     </aside>
   )

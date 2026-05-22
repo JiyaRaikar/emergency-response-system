@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-
-const WS_URL = 'ws://localhost:8000/ws'
+import { WS_URL } from '../config'
 const RECONNECT_INTERVAL_MS = 3000
 
 export function useWebSocket(onMessage) {
