@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+@theme {
+  --color-ops-bg: #0f172a;
+  --color-ops-panel: #1e293b;
+  --color-ops-border: #334155;
+  --color-ops-accent: #f97316;
+  --color-ops-danger: #ef4444;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+.incident-marker,
+.resource-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Command bar — explicit styles so input stays visible above Leaflet etc. */
+.command-bar-input {
+  color: #f8fafc !important;
+  background-color: #1e293b !important;
+  -webkit-text-fill-color: #f8fafc;
+}
+
+.command-bar-input::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+.command-bar-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Keep map stacking below portaled command bar */
+.leaflet-container {
+  z-index: 0;
+}
